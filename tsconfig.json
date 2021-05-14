@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "simple-loader-lib": [
+        "dist/simple-loader-lib"
+      ],
+      "simple-loader-lib/*": [
+        "dist/simple-loader-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

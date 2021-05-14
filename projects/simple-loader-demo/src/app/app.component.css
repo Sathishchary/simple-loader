@@ -1,0 +1,6 @@
+:host::ng-deep .sk-chase-dot:before {
+  background: red !important;
+}
+:host::ng-deep .sk-chase {
+  margin: 240px auto !important;
+}

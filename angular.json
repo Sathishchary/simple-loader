@@ -2,5 +2,159 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "simple-loader-lib": {
+      "projectType": "library",
+      "root": "projects/simple-loader-lib",
+      "sourceRoot": "projects/simple-loader-lib/src",
+      "prefix": "sk",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/simple-loader-lib/tsconfig.lib.json",
+            "project": "projects/simple-loader-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/simple-loader-lib/src/test.ts",
+            "tsConfig": "projects/simple-loader-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/simple-loader-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/simple-loader-lib/tsconfig.lib.json",
+              "projects/simple-loader-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "simple-loader-demo": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/simple-loader-demo",
+      "sourceRoot": "projects/simple-loader-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/simple-loader-demo",
+            "index": "projects/simple-loader-demo/src/index.html",
+            "main": "projects/simple-loader-demo/src/main.ts",
+            "polyfills": "projects/simple-loader-demo/src/polyfills.ts",
+            "tsConfig": "projects/simple-loader-demo/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/simple-loader-demo/src/favicon.ico",
+              "projects/simple-loader-demo/src/assets"
+            ],
+            "styles": [
+              "projects/simple-loader-demo/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/simple-loader-demo/src/environments/environment.ts",
+                  "with": "projects/simple-loader-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "simple-loader-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "simple-loader-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "simple-loader-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/simple-loader-demo/src/test.ts",
+            "polyfills": "projects/simple-loader-demo/src/polyfills.ts",
+            "tsConfig": "projects/simple-loader-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/simple-loader-demo/karma.conf.js",
+            "assets": [
+              "projects/simple-loader-demo/src/favicon.ico",
+              "projects/simple-loader-demo/src/assets"
+            ],
+            "styles": [
+              "projects/simple-loader-demo/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/simple-loader-demo/tsconfig.app.json",
+              "projects/simple-loader-demo/tsconfig.spec.json",
+              "projects/simple-loader-demo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/simple-loader-demo/e2e/protractor.conf.js",
+            "devServerTarget": "simple-loader-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "simple-loader-demo:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "simple-loader-lib"
 }
