@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/simple-loader-lib/tsconfig.lib.json",
             "project": "projects/simple-loader-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/simple-loader-lib/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -53,7 +58,7 @@
             "main": "projects/simple-loader-demo/src/main.ts",
             "polyfills": "projects/simple-loader-demo/src/polyfills.ts",
             "tsConfig": "projects/simple-loader-demo/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/simple-loader-demo/src/favicon.ico",
               "projects/simple-loader-demo/src/assets"
@@ -76,7 +81,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -155,6 +159,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "simple-loader-lib"
+    }
+  },
+  "defaultProject": "simple-loader-lib",
+  "cli": {
+    "analytics": false
+  }
 }
