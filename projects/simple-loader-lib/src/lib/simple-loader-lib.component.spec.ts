@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SimpleLoaderLibComponent } from './simple-loader-lib.component';
 
@@ -6,7 +6,7 @@ describe('SimpleLoaderLibComponent', () => {
   let component: SimpleLoaderLibComponent;
   let fixture: ComponentFixture<SimpleLoaderLibComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SimpleLoaderLibComponent ]
     })
