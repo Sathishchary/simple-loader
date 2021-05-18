@@ -1,27 +1,47 @@
-# SimpleLoader
+<p align="center">
+  <img width="150px" src="https://raw.githubusercontent.com/kolkov/angular-editor/master/docs/angular-editor-logo.png?raw=true" alt="AngularEditor logo"/>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+##  SimpleLoader
+[demo](https://stackblitz.com/edit/simple-loader) | [See the code in StackBlitz](https://stackblitz.com/edit/simple-loader).
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Installation
 
-## Code scaffolding
+Install via [npm][npm] package manager 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm i simple-loader-lib
+```
+### Versions
 
-## Build
+0.0.1 - for Angular v11.x.x and above
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Import `simple-loader-lib` module
 
-## Running end-to-end tests
+```js
+import { HttpClientModule} from '@angular/common/http';
+import { SimpleLoaderLibModule } from 'simple-loader-lib';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  imports: [ HttpClientModule, SimpleLoaderLibModule ]
+})
+```
 
-## Further help
+Then in HTML
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```html
+<sk-simple-loader-lib [loading]="true"></sk-simple-loader-lib>
+```
+
+## Creators
+
+**Sathish Kotha**
+
+* <https://github.com/sathishchary>
+
+[example]: https://stackblitz.com/edit/angular-editor-wysiwyg

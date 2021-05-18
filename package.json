@@ -1,6 +1,6 @@
 {
-  "name": "simple-loader",
-  "version": "0.0.1",
+  "name": "simple-loader-lib",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib-build": "ng build simple-loader-lib"
+    "lint:lib": "ng lint simple-loader-lib",
+    "build-watch:lib": "ng build simple-loader-lib --watch",
+    "test:lib": "ng test simple-loader-lib",
+    "build:lib": "ng build simple-loader-lib",
+    "build-prod:lib": "ng build simple-loader-lib --prod",
+    "publish:lib": "npm run copy:readme && npm run copy:license && npm publish ./dist/simple-loader-lib --tag next",
+    "copy:readme": "cpx README.md dist/simple-loader-lib",
+    "copy:license": "cpx LICENSE dist/sathishkotha/simple-loader-lib"
   },
   "private": true,
   "author": "Sathish Kotha",

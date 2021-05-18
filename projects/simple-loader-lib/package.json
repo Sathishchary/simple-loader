@@ -1,11 +1,26 @@
 {
   "name": "simple-loader-lib",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A simple loader lib for Angular.",
+  "author": "Sathish Kotha <sathishcharykotha@gmail.com>",
+  "repository": "https://github.com/sathishchary/simple-loader/",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/sathishchary/simple-loader/issues"
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
-  }
+  },
+  "keywords": [
+    "angular",
+    "loader",
+    "simple",
+    "simple-loader",
+    "loader-lib"
+  ]
 }
