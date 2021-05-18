@@ -1,9 +1,12 @@
-<p align="center">
-  <img width="150px" src="https://raw.githubusercontent.com/kolkov/angular-editor/master/docs/angular-editor-logo.png?raw=true" alt="AngularEditor logo"/>
-</p>
 
 ##  SimpleLoader
 [demo](https://stackblitz.com/edit/simple-loader) | [See the code in StackBlitz](https://stackblitz.com/edit/simple-loader).
+
+## Output
+
+<p align="center">
+  <img width="150px" src="https://raw.githubusercontent.com/Sathishchary/simple-loader/master/docs/loader.gif" alt="AngularEditor logo"/>
+</p>
 
 ## Getting Started
 
