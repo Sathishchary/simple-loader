@@ -1,6 +1,6 @@
 
 ##  SimpleLoader
-[demo](https://stackblitz.com/edit/simple-loader) | [See the code in StackBlitz](https://stackblitz.com/edit/simple-loader).
+[demo](https://simple-loader.stackblitz.io/) | [See the code in StackBlitz](https://stackblitz.com/edit/simple-loader).
 
 ## Output
 
