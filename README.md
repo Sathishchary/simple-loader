@@ -12,14 +12,14 @@
 
 ### Installation
 
-Install via [npm][npm] package manager 
+Install via npm package manager 
 
 ```bash
 npm i simple-loader-lib
 ```
 ### Versions
 
-0.0.1 - for Angular v11.x.x and above
+1.0.0 - for Angular v11.x.x and above
 
 
 ### Usage
