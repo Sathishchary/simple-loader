@@ -13,7 +13,7 @@ npm i simple-loader-lib
 ```
 ### Versions
 
-1.0.0 - for Angular v11.x.x and above
+2.0.0 - for Angular v20.x.x and above
 
 
 ### Usage
@@ -33,6 +33,14 @@ Then in HTML
 
 ```html
 <sk-simple-loader-lib [loading]="true"></sk-simple-loader-lib>
+```
+
+The library also exports additional loader components that can be used
+directly:
+
+```html
+<sk-bounce-loader></sk-bounce-loader>
+<sk-spinner-loader></sk-spinner-loader>
 ```
 
 ## Creators
