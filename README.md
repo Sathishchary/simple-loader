@@ -13,7 +13,7 @@ npm i simple-loader-lib
 ```
 ### Versions
 
-1.0.0 - for Angular v11.x.x and above
+2.0.0 - for Angular v20.x.x and above
 
 
 ### Usage
