@@ -35,6 +35,14 @@ Then in HTML
 <sk-simple-loader-lib [loading]="true"></sk-simple-loader-lib>
 ```
 
+The library also exports additional loader components that can be used
+directly:
+
+```html
+<sk-bounce-loader></sk-bounce-loader>
+<sk-spinner-loader></sk-spinner-loader>
+```
+
 ## Creators
 
 **Sathish Kotha**
